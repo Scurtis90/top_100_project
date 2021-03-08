@@ -1,8 +1,8 @@
 import React from 'react';
 
-const BillboardNew = ({ billboared }) => {
+const BillboardNew = ({ billboard }) => {
  
-  const { title } = billboard
+  const { title, details } = billboard
   const defaultTitle = title ? title : ""
   const defaultDetails = details ? details : ""
   return(

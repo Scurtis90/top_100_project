@@ -5,7 +5,7 @@ class BillboardsController < ApplicationController
   end
 
   def show
-    @billboards = Billboard.find(params[:id])
+    @billboard = Billboard.find(params[:id])
     render component: 'Billboard', props: { billboard: @billboard }
   end
 
@@ -16,7 +16,7 @@ class BillboardsController < ApplicationController
 
   def create
     @billboard = Billboard.new(billboard_params)
-    if billboard.save
+    if @billboard.save
       redirect_to billboards_path
     else
       render component: 'BillboardNew', props: { billboard: @billboard }
@@ -29,7 +29,7 @@ class BillboardsController < ApplicationController
   end
 
   def update
-    @billboard = Billboards.find(params{:id})
+    @billboard = Billboards.find(params[:id])
     if @billboard.update(billboard_params)
       redirect_to billboards_path
     else

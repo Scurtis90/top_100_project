@@ -3,6 +3,7 @@ import React from 'react';
 const BillboardEdit = ({ billboard }) => {
   const { title, details, id } = billboard
   const defaultTitle = title ? title : "";
+  const defaultDetails = details ? details : '';
   return(
     <>
       <h1>Edit Billboard</h1>
