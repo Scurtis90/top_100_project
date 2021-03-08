@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
 
   def index
     @artists = @billboard.artists
-    render component: 'Artists', props: { billboard: @billboards, artists: artists }
+    render component: 'Artists', props: { billboard: @billboard, artists: @artists }
   end
 
   def show
@@ -17,9 +17,9 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist =@billboard.artists.new(artist_params)
+    @artist = @billboard.artists.new(artist_params)
     if @artist
-      redirect_to billboard_artists_path(billboard)
+      redirect_to billboard_artists_path(@billboard)
     else 
       render component: 'ArtistNew', props: { billboard: @billboard, artist: @artist }
     end
