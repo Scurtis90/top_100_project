@@ -18,7 +18,7 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = @billboard.artists.new(artist_params)
-    if @artist
+    if @artist.save
       redirect_to billboard_artists_path(@billboard)
     else 
       render component: 'ArtistNew', props: { billboard: @billboard, artist: @artist }
@@ -43,15 +43,15 @@ class ArtistsController < ApplicationController
   end
 
   private
-  def artist_params
-    params.require(:artist).permit(:name, :rank)
-  end
-
   def set_billboard
     @billboard = Billboard.find(params[:billboard_id])
   end
 
   def set_artist
-    @artist = @billboard.artists.find(params[:id])
+    @artist = Artist.find(params[:id])
+  end
+
+  def artist_params
+    params.require(:artist).permit(:name, :rank)
   end
 end

@@ -11,7 +11,9 @@ const Billboard = ({ billboard }) => {
       <p>
         created: {created_at}, id: {id}
       </p>
-      <a href="/">back</a>
+      <a href="/">Back</a>
+      <br />
+      <a href={`/billboards/${id}/artists`}>Artists</a>
     </>
   )
 }
