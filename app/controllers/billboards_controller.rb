@@ -29,7 +29,7 @@ class BillboardsController < ApplicationController
   end
 
   def update
-    @billboard = Billboards.find(params[:id])
+    @billboard = Billboard.find(params[:id])
     if @billboard.update(billboard_params)
       redirect_to billboards_path
     else
