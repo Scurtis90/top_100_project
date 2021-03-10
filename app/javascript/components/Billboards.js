@@ -5,7 +5,7 @@ const url = "http://localhost:3000/billboards/";
 const Billboards = ({ billboards }) => {
   return (
     <>
-      <h1>Billboard Charts</h1>
+      <h1>BILLBOARD CHARTS</h1>
       <a href={"/billboards/new"}>Add Billboard</a>
       { billboards.map( (billboard) => 
         <div>

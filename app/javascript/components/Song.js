@@ -5,7 +5,7 @@ const Song = ({ song, artist }) => {
   return (
     <>
       <h1>Song: {title}</h1>
-      <h4>Artist: {artist.name}</h4>
+      <h3>Artist: {artist.name}</h3>
       <p>Album: {album}</p>
       <p>Album: {genre}</p>
       <p>Created at: {created_at}, ID: {id}</p>
