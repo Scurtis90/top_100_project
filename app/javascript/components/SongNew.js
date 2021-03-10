@@ -15,7 +15,8 @@ const SongNew = ({ artist, song }) => {
       <input defaultValue={defaultAlbum} name="song[album]" type="string"/>
       <p>Genre</p>
       <input defaultValue={defaultGenre} name="song[genre]" type="string"/>
-      <br />
+        <br />
+        <br />
       <button type="Submit">Add</button>
       </form>
       </>
