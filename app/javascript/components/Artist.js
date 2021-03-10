@@ -8,11 +8,11 @@ const Artist = ({ artist, billboard }) => {
         <h1>Artist: {name}</h1>
         <h3>Billboard: {billboard.title}</h3>
         <p>Rank: {rank}</p>
-        <a href={`/billboards`}>Back to Billboards</a>
+        <a href={`/artists/${id}/songs`}>Show Songs</a>
+        <br />
+        <a href={`/billboards/${billboard.id}/artists`}>Back to Artists</a>
         <br />
         <a href={`/billboards/${billboard.id}`}>Back to {billboard.title} Billboard</a>
-        <br />
-        <a href={`/artists/${id}/songs`}>Show Songs</a>
       </div>
     </>
   );
