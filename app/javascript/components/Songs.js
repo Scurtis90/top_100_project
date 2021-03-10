@@ -5,7 +5,7 @@ const Songs = ({ songs, artist }) => {
   return (
     <>
       <h1>Songs from {name} </h1>
-      <a href={`/`}>Back to Billboards</a>
+      <a href={`/billboards`}>Back to Billboards</a>
       <br />
       <a href={`/artists/${id}/songs/new`}>New Song</a>
       { songs.map((song) => (
